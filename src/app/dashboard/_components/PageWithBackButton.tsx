@@ -23,7 +23,7 @@ export default function PageWithBackButton({
         </Link>
       </Button>
       <h1 className="text-2xl font-semibold self-center">{pageTitle}</h1>
-      <div className="col-start-2">{children}</div>
+      <div className="col-span-2 sm:col-span-1 sm:col-start-2">{children}</div>
     </div>
   )
 }

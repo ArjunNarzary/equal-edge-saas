@@ -77,7 +77,7 @@ export default function CountryDiscountsForm({
       >
         {countryGroups.map((group, index) => (
           <Card key={group.id}>
-            <CardContent className="pt-6 flex gap-16 items-center">
+            <CardContent className="pt-6 flex flex-col md:flex-row gap-16 md:items-center">
               <div>
                 <h2 className="text-muted-foreground text-sm font-semibold mb-2">
                   {group.name}
@@ -100,8 +100,8 @@ export default function CountryDiscountsForm({
                 type="hidden"
                 {...form.register(`groups.${index}.countryGroupId`)}
               />
-              <div className="ml-auto flex-shrink-0 flex gap-2 flex-col w-min">
-                <div className="flex gap-4">
+              <div className="md:ml-auto flex-shrink-0 flex gap-2 flex-col w-full md:w-min">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <FormField
                     control={form.control}
                     name={`groups.${index}.discountPercentage`}
@@ -110,7 +110,7 @@ export default function CountryDiscountsForm({
                         <FormLabel>Discount %</FormLabel>
                         <FormControl>
                           <Input
-                            className="w-24"
+                            className="w-full sm:min-w-32 md:w-24"
                             type="number"
                             {...field}
                             value={
@@ -135,7 +135,7 @@ export default function CountryDiscountsForm({
                       <FormItem>
                         <FormLabel>Coupon</FormLabel>
                         <FormControl>
-                          <Input className="w-48" {...field} />
+                          <Input className="w-full md:w-48" {...field} />
                         </FormControl>
                       </FormItem>
                     )}

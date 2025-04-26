@@ -96,7 +96,7 @@ export default async function SubscriptionPage() {
           </Card>
         )}
 
-        <div className="grid-cols-2 lg:grid-cols-4 grid gap-4 max-w-screen-xl mx-auto">
+        <div className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 grid gap-4 max-w-screen-xl lg:mx-auto">
           {subscriptionTiersInOrder.map((t) => (
             <PricingCard key={t.name} currentTierName={tier.name} {...t} />
           ))}
